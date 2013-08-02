@@ -13,20 +13,17 @@ import java.util.LinkedList;
  */
 public class GradingScheme {
 
-    private int[] schemeType;
+    private int gradeA, gradeB, gradeC, gradeD, gradeF;
     private int numberGrade = 0;
-//    private String specialOp;
 
-    public GradingScheme(int A, int B, int C, int D, int F) {
+    public GradingScheme(int gradeA, int gradeB, int gradeC, int gradeD,
+            int gradeF) {
 
-        schemeType = new int[5];
-
-        schemeType[0] = A;
-        schemeType[1] = B;
-        schemeType[2] = C;
-        schemeType[3] = D;
-        schemeType[4] = F;
-//        specialOp = "none";
+        this.gradeA = gradeA;
+        this.gradeB = gradeB;
+        this.gradeC = gradeC;
+        this.gradeD = gradeD;
+        this.gradeF = gradeF;
 
     }
 
@@ -65,13 +62,13 @@ public class GradingScheme {
 
         char letterGrade = 0;
 
-        if (numberGrade >= schemeType[0]) {
+        if (numberGrade >= gradeA) {
             letterGrade = 'A';
-        } else if (numberGrade >= schemeType[1]) {
+        } else if (numberGrade >= gradeB) {
             letterGrade = 'B';
-        } else if (numberGrade >= schemeType[2]) {
+        } else if (numberGrade >= gradeC) {
             letterGrade = 'C';
-        } else if (numberGrade >= schemeType[3]) {
+        } else if (numberGrade >= gradeD) {
             letterGrade = 'D';
         } else {
             letterGrade = 'F';
@@ -84,13 +81,13 @@ public class GradingScheme {
 
         char letterGrade = 0;
 
-        if (numGrade >= schemeType[0]) {
+        if (numGrade >= gradeA) {
             letterGrade = 'A';
-        } else if (numGrade >= schemeType[1]) {
+        } else if (numGrade >= gradeB) {
             letterGrade = 'B';
-        } else if (numGrade >= schemeType[2]) {
+        } else if (numGrade >= gradeC) {
             letterGrade = 'C';
-        } else if (numGrade >= schemeType[3]) {
+        } else if (numGrade >= gradeD) {
             letterGrade = 'D';
         } else {
             letterGrade = 'F';

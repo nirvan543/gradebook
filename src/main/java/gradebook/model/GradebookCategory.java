@@ -11,13 +11,23 @@ public class GradebookCategory {
 
     private String categoryName;
     private int weightInPercent;
-	private String specialOp;
+    private boolean dropLowest, replaceWithAVG;
 
-    public GradebookCategory(String categoryName, int weightInPercent, String specialOp) {
+    public GradebookCategory(String categoryName, int weightInPercent) {
         this.categoryName = categoryName;
         this.weightInPercent = weightInPercent;
-		this.specialOp = specialOp;
+        this.dropLowest = false;
+        this.replaceWithAVG = false;
     }
+
+    public GradebookCategory(String categoryName, int weightInPercent,
+                boolean dropLowest, boolean replaceWithAVG) {
+        this.categoryName = categoryName;
+        this.weightInPercent = weightInPercent;
+        this.dropLowest = dropLowest;
+        this.replaceWithAVG = false;
+    }
+
 
     public int getWeightInPercent() {
         return weightInPercent;
@@ -26,7 +36,13 @@ public class GradebookCategory {
     public String getCategoryName() {
         return categoryName;
     }
-	
-	public String get
+
+    public boolean dropLowest() {
+        return dropLowest;
+    }
+
+    public boolean replaceWithAVG() {
+        return replaceWithAVG;
+    }
 
 }
